@@ -13,8 +13,6 @@ if [ -n "$ZAI_API_KEY" ]; then
 EOF
   chown -R node:node /paperclip/.local
 fi
-exec gosu node "$@"
-
 
 # Capture runtime UID/GID from environment variables, defaulting to 1000
 PUID=${USER_UID:-1000}
